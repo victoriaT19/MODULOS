@@ -15,4 +15,3 @@ const diasPerdidos = minutosPerdidos / 1440; // 1440 minutos em um dia
 
 // Exibe o resultado
 console.log(`Você perdeu aproximadamente ${diasPerdidos.toFixed(2)} dias de vida devido ao fumo.`);
-
