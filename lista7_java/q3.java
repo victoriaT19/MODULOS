@@ -1,6 +1,5 @@
 class editor{
     private node head;
-    private int tam;
 
     private static class node{
         String texto;
@@ -14,7 +13,6 @@ class editor{
 
     public editor(){
         this.head = null;
-        this.tam = 0;
     }
 
     //funciona como uma pilha
@@ -23,7 +21,6 @@ class editor{
         node newNode = new node(texto);
         newNode.next = head;
         head = newNode;
-        tam++;
         System.out.println("Ação Realizada: " + texto);
     }
     public void undo(){
@@ -34,7 +31,6 @@ class editor{
 
         System.out.println("Desfazendo a ação: " + head.texto);
         head = head.next;
-        tam--;
     }
     public void printar(){ //printar as ações realizadas
         node cur = head;
