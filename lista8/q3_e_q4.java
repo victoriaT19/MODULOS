@@ -11,6 +11,10 @@ class Funcionario {
         return 0.0;
     }
 
+    public void trabalhar() {
+        System.out.println(nome + " está trabalhando.");
+    }
+
     public void exibirInformacoes() {
         System.out.println("Nome: " + nome);
         System.out.println("Salário: R$ " + salario);
@@ -26,6 +30,11 @@ class Gerente extends Funcionario {
     public double calcularBonus() {
         return salario * 0.20;
     }
+
+    @Override
+    public void trabalhar() {
+        System.out.println(nome + " está gerenciando a equipe e definindo estratégias.");
+    }
 }
 
 class Desenvolvedor extends Funcionario {
@@ -37,6 +46,11 @@ class Desenvolvedor extends Funcionario {
     public double calcularBonus() {
         return salario * 0.10;
     }
+
+    @Override
+    public void trabalhar() {
+        System.out.println(nome + " está escrevendo e testando código.");
+    }
 }
 
 class Main {
@@ -46,8 +60,10 @@ class Main {
 
         System.out.println("Informações do Gerente:");
         gerente.exibirInformacoes();
+        gerente.trabalhar();
 
         System.out.println("\nInformações do Desenvolvedor:");
         desenvolvedor.exibirInformacoes();
+        desenvolvedor.trabalhar();
     }
 }
